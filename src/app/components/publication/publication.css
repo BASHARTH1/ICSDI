@@ -1,13 +1,14 @@
 .pub-logos {
-  padding: 26px 30px;
-  border-radius: 18px;
-  margin-bottom: 24px;
+  padding: 14px 22px;
+  border-radius: 16px;
+  margin: 0 auto 24px;
+  max-width: 520px;
   background: rgba(255, 255, 255, 0.82);
   text-align: center;
 }
 
 .pub-logos img {
-  max-width: 620px;
+  max-width: 360px;
   width: 100%;
   height: auto;
   margin: 0 auto;
