@@ -21,6 +21,10 @@
 .venue-actions .btn {
   width: 100%;
   justify-content: center;
+  padding: 11px 10px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  gap: 6px;
 }
 
 @media (max-width: 520px) {
