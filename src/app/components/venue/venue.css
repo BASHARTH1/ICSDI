@@ -12,6 +12,21 @@
 
 .venue-info h3 { font-size: 1.4rem; margin-bottom: 10px; color: var(--ink); }
 
+.venue-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.venue-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 520px) {
+  .venue-actions { grid-template-columns: 1fr; }
+}
+
 .venue-features {
   list-style: none;
   padding: 0;
