@@ -1,0 +1,27 @@
+<div class="backdrop" aria-hidden="true">
+  @for (o of orbs; track $index) {
+    <span class="orb"
+          [style.left]="o.x"
+          [style.top]="o.y"
+          [style.width.px]="o.size"
+          [style.height.px]="o.size"
+          [style.background]="'radial-gradient(circle at 35% 35%, ' + o.color + ', transparent 70%)'"
+          [style.animation-duration]="o.dur + 's'"
+          [style.animation-delay]="o.delay + 's'"></span>
+  }
+
+  @for (p of particles; track $index) {
+    <span class="particle"
+          [style.left.%]="p.left"
+          [style.width.px]="p.size"
+          [style.height.px]="p.size"
+          [style.color]="p.color"
+          [style.--sway.px]="p.sway"
+          [style.animation-duration]="p.dur + 's'"
+          [style.animation-delay]="p.delay + 's'">
+      <svg viewBox="0 0 64 64">
+        <path d="M32 4C18 8 6 22 6 36c0 14 12 24 26 24 0-14-6-26-18-32 16-2 28 6 36 22 0-20-8-40-18-46z"/>
+      </svg>
+    </span>
+  }
+</div>

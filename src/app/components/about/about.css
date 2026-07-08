@@ -1,0 +1,96 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.about-lead {
+  padding: 34px 36px;
+  border-radius: 18px;
+}
+
+.about-lead p {
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+}
+
+.about-lead strong { color: var(--brand-800); font-weight: 600; }
+
+.about-points {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: grid;
+  gap: 12px;
+}
+
+.about-points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.about-points i { color: var(--green-600); font-size: 1.1rem; }
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.about-card {
+  padding: 26px 20px;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--glass-shadow-lg);
+}
+
+.about-card-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 14px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-800));
+  box-shadow: 0 12px 26px -12px rgba(4, 120, 87, 0.7);
+}
+
+.about-card:nth-child(2) .about-card-icon { background: linear-gradient(135deg, var(--green-600), #0f7a38); }
+.about-card:nth-child(3) .about-card-icon { background: linear-gradient(135deg, var(--teal-600), #0b6f66); }
+.about-card:nth-child(4) .about-card-icon { background: linear-gradient(135deg, var(--accent-500), var(--accent-700)); color: var(--brand-950); }
+
+.about-card-value {
+  font-family: 'Sora', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.about-card-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 880px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .about-lead { padding: 26px 22px; }
+  .about-highlights { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .about-card { padding: 22px 14px; }
+}

@@ -1,0 +1,23 @@
+<section id="dates" class="section section--soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-calendar3"></i> Important Dates</span>
+      <h2>Key Deadlines</h2>
+      <p>Mark your calendar. All deadlines are 23:59 Arabia Standard Time (GMT+3).</p>
+    </div>
+
+    <ol class="timeline">
+      @for (d of dates; track d.label; let last = $last) {
+        <li class="timeline-item" [class.timeline-item--final]="last">
+          <div class="timeline-marker">
+            <i class="bi" [class]="d.icon"></i>
+          </div>
+          <div class="timeline-body glass">
+            <span class="timeline-date">{{ d.date }}</span>
+            <span class="timeline-label">{{ d.label }}</span>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

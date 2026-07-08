@@ -1,0 +1,70 @@
+<section id="register" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-ticket-perforated"></i> Registration Fee</span>
+      <h2>Register for ICSDI 2026</h2>
+      <p>
+        The conference will be held both physically (in person) and online (virtual). Registration
+        fees include everything you need to take part — see what's covered below.
+      </p>
+    </div>
+
+    <div class="reg-layout">
+      <div class="reg-fees glass">
+        <h3>Registration Fees</h3>
+        <ul class="fee-list">
+          @for (f of fees; track f.label) {
+            <li class="fee-row" [class.fee-row--featured]="f.featured">
+              <span class="fee-label">{{ f.label }}</span>
+              <span class="fee-price">{{ f.price }}</span>
+            </li>
+          }
+        </ul>
+        <p class="fee-note">
+          <i class="bi bi-info-circle"></i>
+          The author fee includes the publication and presentation fee. Payments must reach us no
+          later than <strong>25 October 2026</strong>.
+        </p>
+      </div>
+
+      <div class="reg-side">
+        <div class="reg-includes glass">
+          <h4>Your registration includes</h4>
+          <ul>
+            @for (item of includes; track item) {
+              <li><i class="bi bi-check-circle-fill"></i> {{ item }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="reg-cta glass">
+          <h4>Ready to join us?</h4>
+          <p>Complete your registration and payment through the ConfManage portal.</p>
+          <a [href]="c.links.register" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+            <i class="bi bi-box-arrow-up-right"></i> Register Now
+          </a>
+          <a [href]="c.links.visaForm" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <i class="bi bi-passport"></i> Visa Request Form
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="reg-extra glass">
+      <div class="reg-extra-item">
+        <i class="bi bi-bank"></i>
+        <div>
+          <strong>Bank transfer</strong>
+          <span>Pay online via ConfManage or transfer to the institutional account. Send your receipt to <a [href]="'mailto:' + c.email">{{ c.email }}</a>.</span>
+        </div>
+      </div>
+      <div class="reg-extra-item">
+        <i class="bi bi-building-check"></i>
+        <div>
+          <strong>Accommodation</strong>
+          <span>Rooms at the Ramada Hotel Bahrain can be booked directly — <a [href]="c.links.ramada" target="_blank" rel="noopener noreferrer">view rates &amp; availability</a>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

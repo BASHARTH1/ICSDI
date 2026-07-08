@@ -1,0 +1,46 @@
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-info-circle"></i> About the Conference</span>
+      <h2>A Global Platform for Sustainable Innovation</h2>
+      <p>
+        The 2<sup>nd</sup> International Conference on Sustainable Development and Innovation
+        (ICSDI 2026) brings researchers, practitioners, policymakers and innovators together
+        in the Kingdom of Bahrain.
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-lead glass">
+        <p>
+          Hosted by <strong>Gulf University</strong>, ICSDI 2026 is structured around the
+          <strong>17 United Nations Sustainable Development Goals</strong>. It aims to foster
+          interdisciplinary dialogue, research collaboration and innovative practices that
+          address the most pressing challenges of sustainable development globally.
+        </p>
+        <p>
+          Held in a hybrid format at The Art Hotel, the conference welcomes both
+          in-person and virtual participation, connecting a worldwide community of scholars and
+          industry leaders. All accepted papers are published by
+          <strong>Springer Nature</strong> and indexed in <strong>SCOPUS</strong>.
+        </p>
+        <ul class="about-points">
+          <li><i class="bi bi-check-circle-fill"></i> Peer-reviewed original research</li>
+          <li><i class="bi bi-check-circle-fill"></i> Interdisciplinary SDG-aligned tracks</li>
+          <li><i class="bi bi-check-circle-fill"></i> Distinguished international keynote speakers</li>
+          <li><i class="bi bi-check-circle-fill"></i> Networking with academia, industry &amp; government</li>
+        </ul>
+      </div>
+
+      <div class="about-highlights">
+        @for (item of highlights; track item.label) {
+          <div class="about-card glass">
+            <div class="about-card-icon"><i class="bi" [class]="item.icon"></i></div>
+            <div class="about-card-value">{{ item.value }}</div>
+            <div class="about-card-label">{{ item.label }}</div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

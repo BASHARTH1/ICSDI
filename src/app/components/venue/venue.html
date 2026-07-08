@@ -1,0 +1,44 @@
+<section id="venue" class="section section--soft">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-geo-alt"></i> Venue</span>
+      <h2>The Art Hotel, Kingdom of Bahrain</h2>
+      <p>
+        ICSDI 2026 takes place at The Art Hotel in the Kingdom of Bahrain, in hybrid mode — with
+        full virtual access for participants worldwide.
+      </p>
+    </div>
+
+    <div class="venue-grid">
+      <div class="venue-info glass">
+        <h3>A Gateway to the Gulf</h3>
+        <p>
+          Bahrain sits at the heart of the Gulf region, well connected to the wider GCC and known
+          for its heritage sites, beaches and vibrant conference scene. The Art Hotel offers a
+          comfortable setting for two days of research, dialogue and collaboration.
+        </p>
+        <ul class="venue-features">
+          @for (f of features; track f.text) {
+            <li><i class="bi" [class]="f.icon"></i> {{ f.text }}</li>
+          }
+        </ul>
+        <div class="venue-actions">
+          <a href="https://www.google.com/maps/search/The+Art+Hotel+Bahrain" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <i class="bi bi-map"></i> Open in Google Maps
+          </a>
+          <a [href]="c.links.ramada" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+            <i class="bi bi-building"></i> Book Accommodation
+          </a>
+        </div>
+      </div>
+
+      <div class="venue-map glass">
+        <iframe
+          title="Map to The Art Hotel, Bahrain"
+          src="https://www.google.com/maps?q=The+Art+Hotel+Bahrain&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>

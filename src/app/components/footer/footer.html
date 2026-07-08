@@ -1,0 +1,57 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="footer-mark">
+        <img class="footer-logo" src="img/icsdi-logo.png"
+             alt="ICSDI 2026 — International Conference on Sustainable Development & Innovation" />
+      </div>
+      <p>
+        2<sup>nd</sup> International Conference on Sustainable Development and Innovation —
+        advancing the 17 UN Sustainable Development Goals through research and collaboration.
+      </p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/people/Gulf-University/100048486566763/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://x.com/gulf_university" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.linkedin.com/school/gulf-university/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.instagram.com/gulf_university" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/user/GulfUniversity" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        @for (link of links; track link.href) {
+          <li><a [href]="link.href">{{ link.label }}</a></li>
+        }
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Published By</h4>
+      <div class="footer-pub">
+        <img class="footer-springer" src="img/springer-blue-text-logo.png" alt="Springer Nature" />
+        <span class="footer-elsevier"><img src="img/elsevier.svg" alt="Scopus — Elsevier" /> Scopus Indexed</span>
+      </div>
+
+      <h4 class="footer-org-title">Organized By</h4>
+      <img class="footer-gu" src="img/gulf-university-logo.png" alt="Gulf University" />
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li><i class="bi bi-geo-alt"></i> The Art Hotel, Kingdom of Bahrain</li>
+        <li><i class="bi bi-telephone"></i> <a href="tel:+97337435993">+973 3743 5993</a></li>
+        <li><i class="bi bi-envelope"></i> <a href="mailto:conf@gulfuniversity.edu.bh">conf&#64;gulfuniversity.edu.bh</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© {{ year }} Gulf University. All rights reserved.</span>
+      <span>ICSDI 2026 — 16<sup>th</sup>–17<sup>th</sup> November 2026 · Kingdom of Bahrain</span>
+    </div>
+  </div>
+</footer>

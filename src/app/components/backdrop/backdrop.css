@@ -1,0 +1,59 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ---- drifting colour orbs ---- */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.7;
+  will-change: transform;
+  animation-name: orbDrift;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes orbDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(46px, -34px, 0) scale(1.16); }
+}
+
+/* ---- rising leaf particles ---- */
+.particle {
+  position: absolute;
+  bottom: -10%;
+  color: rgba(16, 185, 129, 0.5);
+  opacity: 0;
+  will-change: transform, opacity;
+  animation-name: leafRise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.particle svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+  filter: drop-shadow(0 6px 12px rgba(4, 46, 38, 0.15));
+}
+
+@keyframes leafRise {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  12%  { opacity: 0.9; }
+  50%  { transform: translate3d(var(--sway, 30px), -55vh, 0) rotate(140deg); }
+  88%  { opacity: 0.9; }
+  100% { transform: translate3d(0, -112vh, 0) rotate(300deg); opacity: 0; }
+}
+
+@media (max-width: 640px) {
+  .orb { filter: blur(40px); }
+  /* thin the particle field on small screens */
+  .particle:nth-child(even) { display: none; }
+}

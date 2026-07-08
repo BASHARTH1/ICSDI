@@ -1,0 +1,43 @@
+import { Component, HostListener, signal } from '@angular/core';
+import { NgClass } from '@angular/common';
+
+@Component({
+  selector: 'app-header',
+  standalone: true,
+  imports: [NgClass],
+  templateUrl: './header.html',
+  styleUrl: './header.css'
+})
+export class HeaderComponent {
+  protected readonly scrolled = signal(false);
+  protected readonly menuOpen = signal(false);
+
+  protected readonly navLinks = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Speakers', href: '#speakers' },
+    { label: 'Dates', href: '#dates' },
+    { label: 'Call for Papers', href: '#publication' },
+    { label: 'Registration', href: '#register' }
+  ];
+
+  @HostListener('window:scroll')
+  onScroll() {
+    this.scrolled.set(window.scrollY > 40);
+  }
+
+  toggleMenu() {
+    this.menuOpen.update((v) => !v);
+    this.syncBodyLock();
+  }
+
+  closeMenu() {
+    this.menuOpen.set(false);
+    this.syncBodyLock();
+  }
+
+  private syncBodyLock() {
+    if (typeof document === 'undefined') return;
+    document.body.classList.toggle('nav-locked', this.menuOpen());
+  }
+}
