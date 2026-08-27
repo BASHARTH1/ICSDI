@@ -4,7 +4,9 @@
   "outputDirectory": "dist/gu-icsdi-2026/browser",
   "installCommand": "npm install",
   "framework": null,
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "/(img/.*)", "dest": "/$1" },
+    { "src": "/(favicon\\.ico|favicon\\.png|apple-touch-icon\\.png|robots\\.txt)", "dest": "/$1" },
+    { "src": "/(.*)", "dest": "/construction.html" }
   ]
 }
