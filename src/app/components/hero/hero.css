@@ -399,8 +399,6 @@
 }
 
 .hero-partners-label { text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.72rem; }
-.hero-springer { height: 26px; width: auto; display: block; opacity: 0.95; }
-.hero-partners-divider { width: 1px; height: 20px; background: rgba(255, 255, 255, 0.25); }
 .logo-chip {
   display: inline-flex;
   align-items: center;

@@ -24,8 +24,8 @@ export class PublicationComponent {
     },
     {
       icon: 'bi-card-checklist',
-      title: 'Springer Template',
-      text: 'Format your manuscript using the official Springer paper template.'
+      title: 'Paper Template',
+      text: 'Format your manuscript using the official ICSDI 2026 paper template.'
     },
     {
       icon: 'bi-shield-check',
@@ -35,7 +35,7 @@ export class PublicationComponent {
     {
       icon: 'bi-award',
       title: 'SCOPUS Indexed',
-      text: 'Accepted papers are published by Springer Nature and indexed in SCOPUS.'
+      text: 'Accepted papers are submitted for indexing in SCOPUS.'
     }
   ];
 }

@@ -16,9 +16,8 @@ export const CONFERENCE = {
   phone: '+973 3743 5993',
   links: {
     register: 'https://confmanage.com/account/RegisterUser/?id=92',
-    springerPortal: 'https://confmanage.com/account/RegisterUser/?id=92',
-    springerNature: 'https://www.springernature.com/gp',
-    paperTemplate: 'springer-template-a4.docx',
+    submissionPortal: 'https://confmanage.com/account/RegisterUser/?id=92',
+    paperTemplate: 'paper-template-a4.docx',
     visaForm: 'https://forms.gle/ieBRksLKn2uryL1cA',
     ramada: 'https://www.ramadabahrain.com/'
   }
