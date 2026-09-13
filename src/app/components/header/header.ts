@@ -1,10 +1,19 @@
 import { Component, HostListener, signal } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
+interface NavLink {
+  label: string;
+  /** Section on the home page. */
+  fragment?: string;
+  /** Standalone page route. */
+  path?: string;
+}
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass],
+  imports: [NgClass, RouterLink, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
@@ -12,13 +21,14 @@ export class HeaderComponent {
   protected readonly scrolled = signal(false);
   protected readonly menuOpen = signal(false);
 
-  protected readonly navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Speakers', href: '#speakers' },
-    { label: 'Dates', href: '#dates' },
-    { label: 'Call for Papers', href: '#publication' },
-    { label: 'Registration', href: '#register' }
+  protected readonly navLinks: NavLink[] = [
+    { label: 'Home', fragment: 'home' },
+    { label: 'About', fragment: 'about' },
+    { label: 'Tracks', path: '/tracks' },
+    { label: 'Committees', path: '/committees' },
+    { label: 'Speakers', fragment: 'speakers' },
+    { label: 'Dates', fragment: 'dates' },
+    { label: 'Call for Papers', fragment: 'publication' }
   ];
 
   @HostListener('window:scroll')

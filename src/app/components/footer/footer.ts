@@ -1,19 +1,23 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './footer.html',
   styleUrl: './footer.css'
 })
 export class FooterComponent {
   protected readonly year = 2026;
 
-  protected readonly links = [
-    { label: 'About', href: '#about' },
-    { label: 'Speakers', href: '#speakers' },
-    { label: 'Important Dates', href: '#dates' },
-    { label: 'Call for Papers', href: '#publication' },
-    { label: 'Register', href: '#register' }
+  protected readonly links: { label: string; path: string; fragment?: string }[] = [
+    { label: 'About', path: '/', fragment: 'about' },
+    { label: 'Conference Tracks', path: '/tracks' },
+    { label: 'Committees', path: '/committees' },
+    { label: 'Speakers', path: '/', fragment: 'speakers' },
+    { label: 'Important Dates', path: '/', fragment: 'dates' },
+    { label: 'Call for Papers', path: '/', fragment: 'publication' },
+    { label: 'Register', path: '/', fragment: 'register' }
   ];
 }

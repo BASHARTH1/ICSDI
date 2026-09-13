@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { CONFERENCE } from '../../core/conference';
+import { THEME } from '../../core/content';
 
 interface Unit {
   value: string;
@@ -25,6 +26,7 @@ interface Dot {
 })
 export class HeroComponent implements OnInit, OnDestroy {
   protected readonly c = CONFERENCE;
+  protected readonly theme = THEME;
   protected readonly countdown = signal<Unit[]>([]);
   protected readonly started = signal(false);
 

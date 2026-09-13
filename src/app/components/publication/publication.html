@@ -2,11 +2,42 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow"><i class="bi bi-journal-text"></i> Call for Papers</span>
-      <h2>Publish and Get Indexed in SCOPUS</h2>
-      <p>
-        All accepted and presented papers will be submitted for indexing in SCOPUS,
-        ensuring global visibility for your research.
-      </p>
+      <h2>Call for Papers</h2>
+      <p class="cfp-sub">{{ theme }}</p>
+      <p class="cfp-meta">16–17 November 2026 | The Art Hotel, Kingdom of Bahrain | Hybrid Conference</p>
+    </div>
+
+    <div class="cfp-intro glass">
+      @for (p of cfpParagraphs; track $index) {
+        @if ($index === 0 || expanded()) {
+          <p>{{ p }}</p>
+        }
+      }
+      <button type="button" class="show-more" (click)="expanded.set(!expanded())"
+              [attr.aria-expanded]="expanded()">
+        {{ expanded() ? 'Show less' : 'Show more' }}
+        <i class="bi" [class]="expanded() ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+      </button>
+    </div>
+
+    <div class="cfp-tracks">
+      <div class="cfp-tracks-head">
+        <h3>Conference Tracks</h3>
+        <a routerLink="/tracks" class="btn btn--outline">
+          View all tracks &amp; topics <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="cfp-track-grid">
+        @for (t of tracks; track t.number) {
+          <a class="cfp-track glass" routerLink="/tracks" [fragment]="'track-' + t.number" [style.--accent]="t.accent">
+            <span class="cfp-track-icon"><i class="bi" [class]="t.icon"></i></span>
+            <span class="cfp-track-text">
+              <span class="cfp-track-num">Track {{ t.number }}</span>
+              <span class="cfp-track-title">{{ t.title }}</span>
+            </span>
+          </a>
+        }
+      </div>
     </div>
 
     <div class="pub-banner glass">

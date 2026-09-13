@@ -35,10 +35,44 @@
 
 .about-points i { color: var(--green-600); font-size: 1.1rem; }
 
+.about-theme {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--brand-800) !important;
+}
+
+.audience {
+  margin-top: 28px;
+  padding: 30px 36px;
+  border-radius: 18px;
+}
+
+.audience h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35rem;
+}
+
+.audience h3 i { color: var(--accent-600); }
+
+.audience .about-points {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 8px 0 20px;
+}
+
+.audience-closing { margin: 0; font-style: italic; }
+
 .about-highlights {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
+  /* Keep cards at natural height when the About text is expanded */
+  align-self: start;
+  align-content: start;
+  position: sticky;
+  top: 90px;
 }
 
 .about-card {
@@ -87,10 +121,11 @@
 
 @media (max-width: 880px) {
   .about-grid { grid-template-columns: 1fr; }
+  .about-highlights { position: static; }
 }
 
 @media (max-width: 480px) {
-  .about-lead { padding: 26px 22px; }
+  .about-lead, .audience { padding: 26px 22px; }
   .about-highlights { grid-template-columns: 1fr 1fr; gap: 14px; }
   .about-card { padding: 22px 14px; }
 }

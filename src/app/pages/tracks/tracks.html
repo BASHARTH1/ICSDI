@@ -1,0 +1,106 @@
+<app-header />
+<main>
+  <app-page-banner
+    eyebrow="Call for Papers"
+    icon="bi-diagram-3"
+    heading="Conference Tracks"
+    [lead]="theme" />
+
+  <section class="section">
+    <div class="container">
+      <div class="tracks-intro glass">
+        <p class="tracks-meta">
+          <i class="bi bi-calendar-event"></i> 16–17 November 2026
+          <span aria-hidden="true">|</span>
+          <i class="bi bi-geo-alt"></i> The Art Hotel, Kingdom of Bahrain
+          <span aria-hidden="true">|</span>
+          <i class="bi bi-globe2"></i> Hybrid Conference
+        </p>
+        @for (p of cfpParagraphs; track $index) {
+          <p>{{ p }}</p>
+        }
+      </div>
+
+      <div class="tracks-grid">
+        @for (t of tracks; track t.number) {
+          <article class="track-card glass" [id]="'track-' + t.number" [style.--accent]="t.accent">
+            <header class="track-head">
+              <span class="track-icon"><i class="bi" [class]="t.icon"></i></span>
+              <div>
+                <span class="track-num">Track {{ t.number }}</span>
+                <h2 class="track-title">{{ t.title }}</h2>
+              </div>
+            </header>
+
+            <p class="track-desc">{{ t.description }}</p>
+
+            <h3 class="track-sub">Indicative topics include:</h3>
+            <ul class="track-topics">
+              @for (topic of t.topics; track topic) {
+                @if ($index < previewCount || isOpen(t.number)) {
+                  <li>{{ topic }}</li>
+                }
+              }
+            </ul>
+
+            <div class="track-foot">
+              @if (t.topics.length > previewCount) {
+                <button type="button" class="show-more" (click)="toggle(t.number)"
+                        [attr.aria-expanded]="isOpen(t.number)">
+                  @if (isOpen(t.number)) {
+                    Show less <i class="bi bi-chevron-up"></i>
+                  } @else {
+                    Show more ({{ t.topics.length - previewCount }} more topics) <i class="bi bi-chevron-down"></i>
+                  }
+                </button>
+              }
+
+              <div class="track-sdgs">
+                <span class="track-sdgs-label">SDGs:</span>
+                @for (s of t.sdgs; track s) {
+                  <img class="sdg-img" [src]="sdgImage(s)" [alt]="sdgLabel(s)" [title]="sdgLabel(s)" loading="lazy" />
+                }
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+
+      <div class="tracks-extra">
+        <div class="extra-card glass">
+          <h2><i class="bi bi-collection"></i> Types of Contributions</h2>
+          <p>ICSDI 2026 welcomes:</p>
+          <ul class="check-list">
+            @for (item of contributionTypes; track item) {
+              <li><i class="bi bi-check-circle-fill"></i> {{ item }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="extra-card glass">
+          <h2><i class="bi bi-clipboard-check"></i> Submission Scope</h2>
+          <p>Submitted papers should:</p>
+          <ul class="check-list">
+            @for (item of submissionScope; track item) {
+              <li><i class="bi bi-check-circle-fill"></i> {{ item }}</li>
+            }
+          </ul>
+          <p class="extra-closing">{{ submissionClosing }}</p>
+        </div>
+      </div>
+
+      <div class="tracks-cta">
+        <a [href]="c.links.submissionPortal" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+          <i class="bi bi-box-arrow-up-right"></i> Submission Portal
+        </a>
+        <a [href]="c.links.paperTemplate" download class="btn btn--outline">
+          <i class="bi bi-download"></i> Paper Template (A4 Word)
+        </a>
+        <a routerLink="/" fragment="dates" class="btn btn--outline">
+          <i class="bi bi-calendar2-week"></i> Important Dates
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer />

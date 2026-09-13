@@ -184,6 +184,30 @@ img { max-width: 100%; display: block; }
   color: var(--ink-soft);
 }
 
+/* Keep anchored sections clear of the fixed header */
+section[id] { scroll-margin-top: 64px; }
+
+/* "Show more" toggle for long content */
+.show-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  margin-top: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--brand-700);
+  background: transparent;
+  color: var(--brand-700);
+  font: 600 0.88rem/1.2 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.show-more:hover {
+  background: var(--brand-700);
+  color: var(--white);
+}
+
 /* Glass utility */
 .glass {
   background: var(--glass-bg);

@@ -1,0 +1,39 @@
+<app-header />
+<main>
+  <app-page-banner
+    eyebrow="ICSDI 2026"
+    icon="bi-people"
+    heading="Committees"
+    lead="The people guiding, organizing and reviewing the 2nd International Conference on Sustainable Development & Innovation." />
+
+  <section class="section">
+    <div class="container">
+      @for (committee of committees; track committee.title; let first = $first) {
+        <div class="committee" [class.committee--chair]="first">
+          <h2 class="committee-title"><i class="bi" [class]="committee.icon"></i> {{ committee.title }}</h2>
+          <div class="member-grid">
+            @for (m of committee.members; track m.name) {
+              <article class="member-card glass">
+                @if (m.photo) {
+                  <img class="member-avatar member-avatar--photo" [src]="m.photo" [alt]="m.name" loading="lazy" />
+                } @else if (!committee.noAvatars) {
+                  <span class="member-avatar" aria-hidden="true">{{ initials(m.name) }}</span>
+                }
+                <div class="member-text">
+                  <h3 class="member-name">{{ m.name }}</h3>
+                  @if (m.role) {
+                    <p class="member-role">{{ m.role }}</p>
+                  }
+                  @if (m.org) {
+                    <p class="member-org"><i class="bi bi-building"></i> {{ m.org }}</p>
+                  }
+                </div>
+              </article>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </section>
+</main>
+<app-footer />

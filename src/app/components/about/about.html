@@ -2,33 +2,22 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow"><i class="bi bi-info-circle"></i> About the Conference</span>
-      <h2>A Global Platform for Sustainable Innovation</h2>
-      <p>
-        The 2<sup>nd</sup> International Conference on Sustainable Development and Innovation
-        (ICSDI 2026) brings researchers, practitioners, policymakers and innovators together
-        in the Kingdom of Bahrain.
-      </p>
+      <h2>About ICSDI 2026</h2>
+      <p class="about-theme">“{{ theme }}”</p>
     </div>
 
     <div class="about-grid">
       <div class="about-lead glass">
-        <p>
-          Hosted by <strong>Gulf University</strong>, ICSDI 2026 is structured around the
-          <strong>17 United Nations Sustainable Development Goals</strong>. It aims to foster
-          interdisciplinary dialogue, research collaboration and innovative practices that
-          address the most pressing challenges of sustainable development globally.
-        </p>
-        <p>
-          Held in a hybrid format at The Art Hotel, the conference welcomes both
-          in-person and virtual participation, connecting a worldwide community of scholars and
-          industry leaders. All accepted papers are submitted for indexing in <strong>SCOPUS</strong>.
-        </p>
-        <ul class="about-points">
-          <li><i class="bi bi-check-circle-fill"></i> Peer-reviewed original research</li>
-          <li><i class="bi bi-check-circle-fill"></i> Interdisciplinary SDG-aligned tracks</li>
-          <li><i class="bi bi-check-circle-fill"></i> Distinguished international keynote speakers</li>
-          <li><i class="bi bi-check-circle-fill"></i> Networking with academia, industry &amp; government</li>
-        </ul>
+        @for (p of paragraphs; track $index) {
+          @if ($index < previewCount || expanded()) {
+            <p>{{ p }}</p>
+          }
+        }
+        <button type="button" class="show-more" (click)="expanded.set(!expanded())"
+                [attr.aria-expanded]="expanded()">
+          {{ expanded() ? 'Show less' : 'Show more' }}
+          <i class="bi" [class]="expanded() ? 'bi-chevron-up' : 'bi-chevron-down'"></i>
+        </button>
       </div>
 
       <div class="about-highlights">
@@ -40,6 +29,17 @@
           </div>
         }
       </div>
+    </div>
+
+    <div class="audience glass">
+      <h3><i class="bi bi-people-fill"></i> Who Should Attend?</h3>
+      <p>ICSDI 2026 welcomes:</p>
+      <ul class="about-points">
+        @for (a of audience; track a) {
+          <li><i class="bi bi-check-circle-fill"></i> {{ a }}</li>
+        }
+      </ul>
+      <p class="audience-closing">{{ audienceClosing }}</p>
     </div>
   </div>
 </section>
