@@ -1,0 +1,32 @@
+<section id="tracks" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-diagram-3"></i> Conference Tracks</span>
+      <h2>Conference Tracks</h2>
+      <p>Eight interdisciplinary tracks aligned with the United Nations Sustainable Development Goals.</p>
+    </div>
+
+    <div class="tp-grid">
+      @for (t of tracks; track t.number) {
+        <a class="tp-card glass" routerLink="/tracks" [fragment]="'track-' + t.number" [style.--accent]="t.accent">
+          <span class="tp-head">
+            <span class="tp-icon"><i class="bi" [class]="t.icon"></i></span>
+            <span class="tp-num">Track {{ t.number }}</span>
+          </span>
+          <span class="tp-title">{{ t.title }}</span>
+          <span class="tp-sdgs">
+            @for (s of t.sdgs; track s) {
+              <img class="tp-sdg" [src]="sdgImage(s)" [alt]="sdgLabel(s)" [title]="sdgLabel(s)" loading="lazy" />
+            }
+          </span>
+        </a>
+      }
+    </div>
+
+    <div class="tp-cta">
+      <a routerLink="/tracks" class="btn btn--outline">
+        View all tracks &amp; topics <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>

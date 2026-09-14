@@ -24,10 +24,10 @@ export class HeaderComponent {
   protected readonly navLinks: NavLink[] = [
     { label: 'Home', fragment: 'home' },
     { label: 'About', fragment: 'about' },
-    { label: 'Tracks', path: '/tracks' },
     { label: 'Committees', path: '/committees' },
     { label: 'Speakers', fragment: 'speakers' },
     { label: 'Dates', fragment: 'dates' },
+    { label: 'Tracks', path: '/tracks' },
     { label: 'Call for Papers', fragment: 'publication' }
   ];
 

@@ -1,0 +1,84 @@
+.cp-group + .cp-group { margin-top: 26px; }
+
+.cp-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+}
+
+.cp-title i { color: var(--accent-600); }
+
+.cp-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.cp-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 340px);
+  padding: 14px 16px;
+  border-radius: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cp-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glass-shadow-lg);
+}
+
+.cp-avatar {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  background: var(--white);
+  border: 3px solid var(--white);
+  box-shadow: 0 8px 20px -10px rgba(4, 46, 38, 0.5);
+}
+
+.cp-avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-900));
+}
+
+.cp-text { min-width: 0; }
+
+.cp-name {
+  font-size: 0.95rem;
+  margin: 0 0 2px;
+}
+
+.cp-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand-700);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cp-org {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cp-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}

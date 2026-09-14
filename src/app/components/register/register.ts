@@ -18,9 +18,9 @@ export class RegisterComponent {
 
   protected readonly fees: FeeRow[] = [
     { label: 'Virtual Attendance (no paper)', price: 'Free' },
-    { label: 'Physical Attendance (no paper)', price: '$200' },
-    { label: 'Authors — Virtual (with paper)', price: '$400', featured: true },
-    { label: 'Authors — Physical (with paper)', price: '$500', featured: true }
+    { label: 'Physical Attendance (no paper)', price: 'TBD' },
+    { label: 'Authors — Virtual (with paper)', price: 'TBD', featured: true },
+    { label: 'Authors — Physical (with paper)', price: 'TBD', featured: true }
   ];
 
   protected readonly includes = [

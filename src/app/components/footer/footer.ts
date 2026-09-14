@@ -13,10 +13,10 @@ export class FooterComponent {
 
   protected readonly links: { label: string; path: string; fragment?: string }[] = [
     { label: 'About', path: '/', fragment: 'about' },
-    { label: 'Conference Tracks', path: '/tracks' },
     { label: 'Committees', path: '/committees' },
     { label: 'Speakers', path: '/', fragment: 'speakers' },
     { label: 'Important Dates', path: '/', fragment: 'dates' },
+    { label: 'Conference Tracks', path: '/tracks' },
     { label: 'Call for Papers', path: '/', fragment: 'publication' },
     { label: 'Register', path: '/', fragment: 'register' }
   ];

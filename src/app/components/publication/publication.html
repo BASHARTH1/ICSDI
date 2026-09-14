@@ -20,26 +20,6 @@
       </button>
     </div>
 
-    <div class="cfp-tracks">
-      <div class="cfp-tracks-head">
-        <h3>Conference Tracks</h3>
-        <a routerLink="/tracks" class="btn btn--outline">
-          View all tracks &amp; topics <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-      <div class="cfp-track-grid">
-        @for (t of tracks; track t.number) {
-          <a class="cfp-track glass" routerLink="/tracks" [fragment]="'track-' + t.number" [style.--accent]="t.accent">
-            <span class="cfp-track-icon"><i class="bi" [class]="t.icon"></i></span>
-            <span class="cfp-track-text">
-              <span class="cfp-track-num">Track {{ t.number }}</span>
-              <span class="cfp-track-title">{{ t.title }}</span>
-            </span>
-          </a>
-        }
-      </div>
-    </div>
-
     <div class="pub-banner glass">
       <div class="pub-banner-text">
         <h3>Ready to submit your paper?</h3>

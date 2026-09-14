@@ -44,6 +44,14 @@ export const SDG_TITLES: Record<number, string> = {
   16: 'Peace, Justice and Strong Institutions', 17: 'Partnerships for the Goals'
 };
 
+export function sdgImage(n: number): string {
+  return `img/sdg/sdg-${n.toString().padStart(2, '0')}.png`;
+}
+
+export function sdgLabel(n: number): string {
+  return `SDG ${n}: ${SDG_TITLES[n] ?? ''}`;
+}
+
 export interface Track {
   number: number;
   title: string;
@@ -317,6 +325,16 @@ export interface Member {
   org?: string;
   /** Path under public/, e.g. img/committee/name.jpg */
   photo?: string;
+}
+
+export function memberInitials(name: string): string {
+  return name
+    .replace(/^(Prof|Dr)\.?\s+/i, '')
+    .split(/\s+/)
+    .filter((w) => /^[A-Za-z]/.test(w))
+    .slice(0, 2)
+    .map((w) => w[0].toUpperCase())
+    .join('');
 }
 
 export interface Committee {

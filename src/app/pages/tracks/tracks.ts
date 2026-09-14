@@ -7,7 +7,8 @@ import { CONFERENCE } from '../../core/conference';
 import {
   CFP_PARAGRAPHS,
   CONTRIBUTION_TYPES,
-  SDG_TITLES,
+  sdgImage,
+  sdgLabel,
   SUBMISSION_CLOSING,
   SUBMISSION_SCOPE,
   THEME,
@@ -34,13 +35,8 @@ export class TracksPage {
   protected readonly previewCount = 6;
   private readonly openTracks = signal<ReadonlySet<number>>(new Set());
 
-  protected sdgImage(n: number): string {
-    return `img/sdg/sdg-${n.toString().padStart(2, '0')}.png`;
-  }
-
-  protected sdgLabel(n: number): string {
-    return `SDG ${n}: ${SDG_TITLES[n] ?? ''}`;
-  }
+  protected readonly sdgImage = sdgImage;
+  protected readonly sdgLabel = sdgLabel;
 
   protected isOpen(n: number): boolean {
     return this.openTracks().has(n);

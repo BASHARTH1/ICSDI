@@ -1,0 +1,41 @@
+<section id="committees" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow"><i class="bi bi-people"></i> Committees</span>
+      <h2>Committees</h2>
+      <p>The people guiding and organizing ICSDI 2026.</p>
+    </div>
+
+    @for (committee of committees; track committee.title) {
+      <div class="cp-group">
+        <h3 class="cp-title"><i class="bi" [class]="committee.icon"></i> {{ committee.title }}</h3>
+        <div class="cp-grid">
+          @for (m of committee.members; track m.name) {
+            <article class="cp-card glass">
+              @if (m.photo) {
+                <img class="cp-avatar" [src]="m.photo" [alt]="m.name" loading="lazy" />
+              } @else {
+                <span class="cp-avatar cp-avatar--initials" aria-hidden="true">{{ initials(m.name) }}</span>
+              }
+              <div class="cp-text">
+                <h4 class="cp-name">{{ m.name }}</h4>
+                @if (m.role) {
+                  <p class="cp-role">{{ m.role }}</p>
+                }
+                @if (m.org) {
+                  <p class="cp-org">{{ m.org }}</p>
+                }
+              </div>
+            </article>
+          }
+        </div>
+      </div>
+    }
+
+    <div class="cp-cta">
+      <a routerLink="/committees" class="btn btn--outline">
+        View all committees <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>

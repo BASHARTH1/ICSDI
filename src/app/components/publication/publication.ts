@@ -1,7 +1,6 @@
 import { Component, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CONFERENCE } from '../../core/conference';
-import { CFP_PARAGRAPHS, THEME, TRACKS } from '../../core/content';
+import { CFP_PARAGRAPHS, THEME } from '../../core/content';
 
 interface Guideline {
   icon: string;
@@ -12,7 +11,6 @@ interface Guideline {
 @Component({
   selector: 'app-publication',
   standalone: true,
-  imports: [RouterLink],
   templateUrl: './publication.html',
   styleUrl: './publication.css'
 })
@@ -20,7 +18,6 @@ export class PublicationComponent {
   protected readonly c = CONFERENCE;
   protected readonly theme = THEME;
   protected readonly cfpParagraphs = CFP_PARAGRAPHS;
-  protected readonly tracks = TRACKS;
   protected readonly expanded = signal(false);
 
   protected readonly guidelines: Guideline[] = [
