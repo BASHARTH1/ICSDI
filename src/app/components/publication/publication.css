@@ -34,6 +34,7 @@
 }
 
 .pub-banner-text strong { color: var(--brand-800); }
+.pub-banner-text p + p { margin-top: 10px; }
 
 .pub-actions {
   display: flex;
@@ -64,8 +65,8 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
 }
-.pub-badge-elsevier img {
-  height: 44px;
+.pub-badge-publisher img {
+  height: 72px;
   width: auto;
   background: #fff;
   border-radius: 8px;

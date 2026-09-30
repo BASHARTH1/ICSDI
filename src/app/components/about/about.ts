@@ -27,6 +27,6 @@ export class AboutComponent {
     { icon: 'bi-calendar2-week', value: '2 Days', label: '16–17 November 2026' },
     { icon: 'bi-diagram-3', value: '8 Tracks', label: 'Aligned with the UN SDGs' },
     { icon: 'bi-globe2', value: 'Hybrid', label: 'On-site & virtual' },
-    { icon: 'bi-journal-bookmark', value: 'SCOPUS', label: 'Indexed proceedings' }
+    { icon: 'bi-journal-bookmark', value: 'Taylor & Francis', label: 'Published proceedings' }
   ];
 }

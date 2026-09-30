@@ -4,7 +4,7 @@ Official website for the **2nd International Conference on Sustainable Developme
 
 - **Dates:** 16–17 November 2026
 - **Venue:** The Art Hotel & Resort, Kingdom of Bahrain (Hybrid)
-- **Indexing:** Papers submitted for SCOPUS indexing
+- **Publisher:** Taylor & Francis
 
 ## Stack
 

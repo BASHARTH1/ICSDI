@@ -38,8 +38,8 @@ export class PublicationComponent {
     },
     {
       icon: 'bi-award',
-      title: 'SCOPUS Indexed',
-      text: 'Accepted papers are submitted for indexing in SCOPUS.'
+      title: 'Taylor & Francis',
+      text: 'Accepted papers will be published by Taylor & Francis.'
     }
   ];
 }

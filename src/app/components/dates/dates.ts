@@ -15,10 +15,9 @@ interface KeyDate {
 })
 export class DatesComponent {
   protected readonly dates: KeyDate[] = [
-    { date: '1 October 2026', label: 'Full Paper Submission', icon: 'bi-upload' },
-    { date: '10 October 2026', label: 'Acceptance / Rejection Notification', icon: 'bi-envelope-check' },
-    { date: '15 October 2026', label: 'Camera-Ready Submission', icon: 'bi-file-earmark-check' },
-    { date: '25 October 2026', label: 'Registration Closing', icon: 'bi-door-closed' },
-    { date: '16–17 November 2026', label: 'Conference Days', icon: 'bi-calendar-event' }
+    { date: '25 October 2026', label: 'Full Paper Submission Deadline', icon: 'bi-upload' },
+    { date: '5 November 2026', label: 'Notification of Revision / Acceptance', icon: 'bi-envelope-check' },
+    { date: '10 November 2026', label: 'Registration Deadline', icon: 'bi-door-closed' },
+    { date: '16–17 November 2026', label: 'Conference Dates', icon: 'bi-calendar-event' }
   ];
 }

@@ -406,16 +406,7 @@
   border-radius: 8px;
   padding: 5px 9px;
 }
-.logo-chip img { height: 26px; width: auto; display: block; }
-.hero-scopus {
-  font-weight: 700;
-  color: var(--white);
-  background: #e9711c;
-  padding: 4px 12px;
-  border-radius: 6px;
-  letter-spacing: 0.02em;
-  font-size: 0.82rem;
-}
+.logo-chip img { height: 44px; width: auto; display: block; }
 
 .hero-scroll {
   position: absolute;
