@@ -11,7 +11,7 @@ export const CONFERENCE = {
   datesShort: '16–17 Nov 2026',
   startDate: '2026-11-16T09:00:00+03:00',
   mode: 'Hybrid — Physical & Virtual',
-  venue: 'Gulf University & Bahrain Polytechnic, Kingdom of Bahrain',
+  venue: 'Bahrain Polytechnic, Kingdom of Bahrain',
   email: 'conf@gulfuniversity.edu.bh',
   phone: '+973 3743 5993',
   links: {

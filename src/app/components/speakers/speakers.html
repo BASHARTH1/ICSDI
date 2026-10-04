@@ -22,5 +22,9 @@
         </article>
       }
     </div>
+
+    @if (!speakers.length) {
+      <p class="speakers-empty glass"><i class="bi bi-megaphone"></i> Keynote speakers will be announced soon.</p>
+    }
   </div>
 </section>

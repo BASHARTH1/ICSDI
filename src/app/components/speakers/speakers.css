@@ -83,3 +83,15 @@
   .speaker-card { padding: 24px 22px 26px; }
   .speaker-bio { text-align: center; }
 }
+
+.speakers-empty {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 26px 28px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--ink-soft);
+}
+
+.speakers-empty i { color: var(--brand-700); margin-right: 6px; }
