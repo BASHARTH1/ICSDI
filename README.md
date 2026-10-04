@@ -3,7 +3,7 @@
 Official website for the **2nd International Conference on Sustainable Development and Innovation (ICSDI 2026)**, hosted by Gulf University, Kingdom of Bahrain.
 
 - **Dates:** 16–17 November 2026
-- **Venue:** The Art Hotel & Resort, Kingdom of Bahrain (Hybrid)
+- **Venue:** Gulf University & Bahrain Polytechnic, Kingdom of Bahrain (Hybrid)
 - **Publisher:** Taylor & Francis
 
 ## Stack

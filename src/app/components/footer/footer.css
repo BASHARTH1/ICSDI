@@ -39,6 +39,13 @@
 
 .footer-org-title { margin-top: 22px; }
 
+.footer-org {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
 .footer-gu-link {
   display: inline-block;
   transition: transform 0.25s ease;

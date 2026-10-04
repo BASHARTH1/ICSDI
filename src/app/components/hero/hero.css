@@ -161,6 +161,14 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.hero-org-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+
 .hero-org-logo {
   display: inline-flex;
   cursor: pointer;
