@@ -363,7 +363,7 @@ export const COMMITTEES: Committee[] = [
     members: [
       { name: 'Dr. Meryem Fati', role: 'Vice President for Academic Affairs', org: 'University of Bahrain', photo: 'img/committee/meryem-fati.jpeg' },
       { name: 'Dr. Mohammed Isam', photo: 'img/committee/mohammed-isam.jpg' },
-      { name: 'Dr. Siddiq Balal', role: 'Dean', org: 'College of Administrative and Financial Sciences', photo: 'img/committee/siddiq-bala.png' },
+      { name: 'Dr. Siddig Balal', role: 'Dean', org: 'College of Administrative and Financial Sciences', photo: 'img/committee/siddiq-bala.png' },
       { name: 'Dr. Naglaa El Gammal', role: 'Dean', org: 'College of Communication and Media Technologies', photo: 'img/committee/naglaa-elgammal.jpg' },
       { name: 'Dr. Aseel Abdulsalam Al Ayash', role: 'Dean', org: 'College of Engineering', photo: 'img/committee/aseel-abdulsalam.jpg' },
       { name: 'Prof. Firas Mohammed', role: 'Dean', org: 'College of Law', photo: 'img/committee/firas-mohammed.jpg' }
