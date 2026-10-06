@@ -15,7 +15,7 @@ export const CONFERENCE = {
   email: 'conf@gulfuniversity.edu.bh',
   phone: '+973 3743 5993',
   links: {
-    register: 'https://confmanage.com/account/RegisterUser/?id=92',
+    register: 'https://confmanage.com/conferences/2icosdii2-2026/auth',
     submissionPortal: 'https://confmanage.com/account/RegisterUser/?id=92',
     paperTemplate: 'paper-template-a4.docx',
     authorInstructions: 'author-instructions-a4.docx',
