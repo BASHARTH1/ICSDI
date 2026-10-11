@@ -374,7 +374,7 @@ export const COMMITTEES: Committee[] = [
     icon: 'bi-people',
     members: [
       { name: 'Dr. Abu Bashar', role: 'Chair University Research Council', org: 'College of Communication and Media Technologies', photo: 'img/committee/abu-bashar.jpg' },
-      { name: 'Dr. Mohammed Saied', role: 'Chair of the College Research Council', org: 'College of Administrative and Financial Sciences', photo: 'img/committee/mohammed-saied.jpg' },
+      { name: 'Dr. Ali Ateeq', role: 'Chair of the College Research Council', org: 'College of Administrative and Financial Sciences', photo: 'img/committee/ali-ateeq.jpg' },
       { name: 'Dr. Jain Tony', role: 'Chair of the College Research Council', org: 'College of Engineering', photo: 'img/committee/jain-tony.png' },
       { name: 'Dr. Heba Alsaleh', role: 'Chair of the College Research Council', org: 'College of Law' }
     ]
