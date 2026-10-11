@@ -13,7 +13,7 @@ export const CONFERENCE = {
   mode: 'Hybrid — Physical & Virtual',
   venue: 'Bahrain Polytechnic, Kingdom of Bahrain',
   email: 'conf@gulfuniversity.edu.bh',
-  phone: '+973 3743 5993',
+  phone: '+973 3375 1967',
   links: {
     register: 'https://confmanage.com/conferences/2icosdii2-2026/auth',
     submissionPortal: 'https://confmanage.com/account/RegisterUser/?id=92',
