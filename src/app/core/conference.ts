@@ -17,7 +17,7 @@ export const CONFERENCE = {
   links: {
     register: 'https://confmanage.com/conferences/2icosdii2-2026/auth',
     submissionPortal: 'https://confmanage.com/account/RegisterUser/?id=92',
-    paperTemplate: 'paper-template-a4.docx',
+    paperTemplate: 'author-instructions-a4.docx',
     authorInstructions: 'author-instructions-a4.docx',
     visaForm: 'https://forms.gle/ieBRksLKn2uryL1cA',
     ramada: 'https://www.ramadabahrain.com/'
